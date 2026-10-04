@@ -1,0 +1,25 @@
+{
+  "name": "africrm",
+  "version": "1.0.0",
+  "description": "AfriCRM — The All-in-One Sales CRM Built for African SMEs.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test test/*.test.js && node scripts/verify-engineering-docs.js",
+    "docs:verify": "node scripts/verify-engineering-docs.js"
+  },
+  "keywords": [
+    "crm",
+    "africa",
+    "kenya",
+    "sales",
+    "nairobi",
+    "mpesa",
+    "whatsapp",
+    "pipeline",
+    "sme"
+  ],
+  "author": "AfriCRM Engineering Team",
+  "license": "ISC"
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AfriCRM — The All-in-One Sales CRM Built for African SMEs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="rail">
+        <a class="mark" href="#/dashboard" data-nav>
+          <span class="mark-city">Afri<span style="color:#d7c4a3">CRM</span></span>
+          <span class="mark-crm">Kenya Sales Desk</span>
+        </a>
+        <nav class="nav">
+          <a href="#/dashboard" data-nav data-route="dashboard">Dashboard</a>
+          <a href="#/deals" data-nav data-route="deals">Pipeline (KES)</a>
+          <a href="#/contacts" data-nav data-route="contacts">Contacts</a>
+          <a href="#/companies" data-nav data-route="companies">Companies</a>
+          <a href="#/quotes" data-nav data-route="quotes">Quotes & Billing</a>
+          <a href="#/tasks" data-nav data-route="tasks">Tasks</a>
+          <a href="#/activities" data-nav data-route="activities">Activities</a>
+          <a href="#/import" data-nav data-route="import">CSV Import</a>
+        </nav>
+        <div class="rail-foot">
+          <p><strong>Twiga Hub Ltd</strong></p>
+          <p>KES · Nairobi Desk</p>
+        </div>
+      </aside>
+
+      <main class="stage">
+        <header class="top">
+          <form class="search" id="search-form">
+            <label class="sr-only" for="q">Search CRM</label>
+            <input id="q" name="q" type="search" placeholder="Search contacts, accounts, deals, tasks..." autocomplete="off" />
+          </form>
+          <div class="top-actions">
+            <button class="ghost" id="export-csv-btn" type="button" title="Export CSV">Export CSV</button>
+            <button class="ghost" id="reset-demo-btn" type="button" title="Restore Demo Data">Reset Sample Data</button>
+          </div>
+        </header>
+        <div id="view"></div>
+      </main>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- Standard Record Modal Dialog -->
+    <dialog id="modal" aria-labelledby="modal-title">
+      <form method="dialog" class="sheet" id="record-form"></form>
+    </dialog>
+
+    <!-- Core Business Logic, Security & Utilities -->
+    <script src="crm-core.js"></script>
+    <!-- AfriCRM Main Client Controller -->
+    <script src="app.js"></script>
+  </body>
+</html>
